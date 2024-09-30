@@ -1,0 +1,331 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #FFF;
+    --negro: #000;
+    --suave: #BDB2F6;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;    
+    --fuentePrincipal: 'Andika', cursive;
+}
+
+.letra-regular {
+    font-family: "Andika", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.letra-bold {
+    font-family: "Andika", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: .5rem 0;
+}
+/** Footer **/
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 1rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Productos **/
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--negro);
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 30%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+
+.contenedor {
+    max-width: 70rem;
+    margin: 0 auto;
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    column-gap: 1rem;
+    display: block;    
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 10rem ;
+        column-gap: 1rem;
+    }
+  }
+
+  .contenedor-tabla {
+    max-width: 70rem;
+    margin: 0 auto;
+    color: var(--negro);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    column-gap: 1rem;
+    display: block;    
+    text-align: center;
+}
+@media (min-width: 768px) {
+  .contenedor-tabla{
+    width:768px;
+  }
+    } 
+
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 35%;
+    border: none;
+    padding: .8rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;    
+}
+
+.content-table {
+    border-collapse: collapse;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    height: 1rem;
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight:400;
+    padding: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 860px) {
+    .content-table {
+      width: 860; /* Switch to a fixed width on larger screens */
+    }
+  }
+  .content-table th,
+  .content-table td {
+    padding: .1rem .1rem;
+    font-size: 1.1rem;    
+  }
+  
+  .content-table tbody tr {
+    border-bottom: .5rem solid #dddddd;
+    background-color: var(--blanco);
+    font-size: 1.3rem;    
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: .5rem solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+  tfoot {
+    font-weight: 400;
+    background-color: var(--gris);
+    color: #ffffff;
+    text-align: right;
+    font-size: 1.1rem;
+      
+  }
+  
+
+  .content-tablem {
+    border-collapse: collapse;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    height: 1rem;
+  }
+  
+  .content-tablem thead tr {
+    background-color: red;
+    color: #ffffff;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight:400;
+    padding: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+  @media (min-width: 768px) {
+    .content-tablem {
+      width: 768; /* Switch to a fixed width on larger screens */
+    }
+  }
+
+  
+  
+  .content-tablem th,
+  .content-tablem td {
+    padding: .1rem .1rem;
+  }
+  
+  .content-tablem tbody tr {
+    border-bottom: .5rem solid #dddddd;
+    background-color: var(--blanco);
+    font-size: 1.3rem;    
+  }
+  
+  .content-tablem tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-tablem tbody tr:last-of-type {
+    border-bottom: .5rem solid red;
+  }
+  
+  .content-tablem tbody tr.active-row {
+    font-weight: bold;
+    color: red;
+  }
+  
+  .horizontal-scroll {
+    overflow: hidden;
+    overflow-x: 70%;
+    clear: both;
+    width: 70%;
+  }
+  
+  .myTable {
+    width: 70%;
+  }
+  
+  @media (min-width: 768px) {
+    .myTable {
+      width: 768; /* Switch to a fixed width on larger screens */
+    }
+  }
